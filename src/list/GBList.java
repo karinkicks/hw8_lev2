@@ -1,6 +1,6 @@
 package list;
 
-public interface GBList extends GBIterable {
+public interface GBList {
     void add(String val);
     boolean remove(String val);
     int size();

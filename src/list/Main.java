@@ -1,6 +1,7 @@
 package list;
 
 import list.impl.DoublyLinkedList;
+import list.impl.MyArrayList;
 import list.impl.SingleLinkedList;
 
 public class Main {
@@ -29,7 +30,7 @@ public class Main {
         list1.add("3");
         list1.add("4");
         System.out.println(list1.toString());
-        GBIterator iterator1 = list1.iterator();
+        GBIterator iterator1 = ((DoublyLinkedList) list1).iterator();
         while (iterator1.hasNext()) {
           String next = iterator1.next();
             System.out.println(next);
@@ -37,10 +38,15 @@ public class Main {
         System.out.println(list1.get(0));
         list1.remove("3");
         System.out.println(list1.toString());
-        GBIterator iterator2 = list1.iterator();
+        GBIterator iterator2 = ((DoublyLinkedList) list1).iterator();
         while (iterator2.hasNext()) {
             String next = iterator2.next();
             System.out.println(next);
         }
+
+        MyArrayList myArrayList  = new MyArrayList();
+        myArrayList.add("Karina");
+        System.out.println(myArrayList.get(6));
+
     }
 }

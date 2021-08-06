@@ -1,9 +1,10 @@
 package list.impl;
 
+import list.GBIterable;
 import list.GBIterator;
 import list.GBList;
 
-public class DoublyLinkedList implements GBList {
+public class DoublyLinkedList implements GBList, GBIterable {
     private Node first;
     private int size = 0;
 
